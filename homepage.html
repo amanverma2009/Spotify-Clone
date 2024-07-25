@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+  <body>
+    <div id="left">
+      <section id="top-left">
+        <div id="top-left-div">
+          <ul>
+            <li>
+              <svg
+              data-encore-id="icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="white"
+                height="24"
+              >
+                <path
+                  d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732l-7.5-4.33z"
+                ></path>
+              </svg>
+              <span class="home-text"> Home </span>
+              <img
+                src="Assets/close-svgrepo-com.svg"
+                alt="Close button"
+                height="24"
+                width="24"
+                id="close-icon"
+              />
+            </li>
+            <li>
+              <img
+              src="Assets/search-svgrepo-com.svg"
+              alt=""
+              height="24"
+              width="24"
+              />
+              <span class="home-text">
+                <a href="/">Search</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="bottom-left">
+        <div id="library">
+          <svg
+            data-encore-id="icon"
+            role="img"
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            filter="invert(0.5)"
+            height="25"
+          >
+            <path
+              d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+            ></path>
+          </svg>
+          <p>Your Library</p>
+          <div class="arrow">
+            <img src="Assets/plus-svgrepo-com.svg" alt="" />
+          </div>
+        </div>
+        <div id="songslist">
+          <ul>
+            <!-- song info of library from javascript -->
+          </ul>
+        </div>
+      </section>
+    </div>
+    <section id="right">
+      <nav>
+        <img
+          src="Assets/hamburger-svgrepo-com.svg"
+          alt=""
+          height="24"
+          width="24"
+          id="hamburger"
+        />
+        <div id="navigation-buttons-div">
+          <button class="navigation-buttons">
+            <img
+              src="Assets/left-chevron-svgrepo-com.svg"
+              alt=""
+              height="24"
+              width="24"
+            />
+          </button>
+          <button class="navigation-buttons">
+            <img
+              src="Assets/right-chevron-svgrepo-com.svg"
+              alt=""
+              height="24"
+              width="24"
+            />
+          </button>
+        </div>
+
+        <div id="login-button">
+          <button>Sign up</button>
+          <button>Log in</button>
+        </div>
+      </nav>
+      <h2 id="heading">Spotify Playlists</h2>
+      <div class="cards">
+        <!-- cards from javascript --> 
+      </div>
+    </section>
+    <div id="bottom">
+      <div class="songinfo"></div>
+      <div id="songduration-start">00:00</div>
+      <div id="playbar">
+        <button>
+          <img
+            src="Assets/shuffle-01-svgrepo-com.svg"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+        <button>
+          <img
+            id="previous"
+            src="Assets/previous-6789741.svg"
+            alt=""
+            height="20"
+            width="20"
+            style="clip-path: inset(0 0 4px 0)"
+          />
+        </button>
+        <button id="play-btn">
+          <img id="play" src="Assets/play-1001-svgrepo-com.svg" alt="" />
+        </button>
+        <button>
+          <img
+            id="next"
+            src="Assets/next-6789737.svg"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+        <button>
+          <img
+            src="Assets/loop-svgrepo-com.svg"
+            alt=""
+            height="20"
+            width="20"
+          />
+        </button>
+        <div id="seekbar">
+          <div id="circle"></div>
+        </div>
+      </div>
+      <div id="songduration-end">00:00</div>
+      <div class="volume-bar">
+        <img src="/Assets/volume-max-svgrepo-com.svg" alt="Volume icon" height="24" width="24">
+        <div id="range">
+          <input type="range" name="volume-bar" id="" value="100">
+        </div>
+      </div>
+    </div>
+    <script src="homepage.js"></script>
+  </body>
+</html>
