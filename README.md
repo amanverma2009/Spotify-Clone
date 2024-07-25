@@ -9,17 +9,21 @@ This Spotify clone project is unique because it features dynamic albums. When yo
 - JavaScript
 
 ## Instructions/Documentation:
-1. **Adding Songs:**
+1. Adding Songs:
    - Create a new folder for each album.
    - Inside the folder, include a `cover.jpg` for the album art.
    - Add an `info.json` file containing the song details.
    - Add the song files to the folder.
 
 ## Features:
-### - Dynamic Albums: Interactive album view showing song libraries.
-### - Playback Controls: Includes play, pause, previous, next, and volume control functionalities.
-### - Flexible Song Management: Easily add new songs and albums by creating folders with the required files.
-### - User-Friendly Interface: An intuitive design resembling the original Spotify layout.
+### - Dynamic Albums: 
+Interactive album view showing song libraries.
+### - Playback Controls: 
+Includes play, pause, previous, next, and volume control functionalities.
+### - Flexible Song Management: 
+Easily add new songs and albums by creating folders with the required files.
+### - User-Friendly Interface: 
+An intuitive design resembling the original Spotify layout.
 
 ## Disclaimer:
 This project is a clone of Spotify created for educational purposes only. It is not affiliated with Spotify in any way, and it is not intended for commercial use. All trademarks, service marks, trade names, product names, logos, and images appearing in this project are the property of their respective owners. This project is solely for learning and practice purposes, and any resemblance to real products or services is purely coincidental.
