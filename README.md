@@ -4,10 +4,7 @@
 This Spotify clone project is unique because it features dynamic albums. When you click on an album, it shows the number of libraries, and by clicking on the songs in the library, you can play the song, navigate to the previous or next track, play a specific song at a specific duration, and adjust the volume. This project is made using HTML, CSS, and JavaScript. More songs can be added by creating a folder and adding a `cover.jpg` and `info.json` file along with the songs.
 
 ## Languages Used:
-- HTML
-- CSS
-- JavaScript
-
+![HTML5](https://img.shields.io/badge/html-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ## Instructions/Documentation:
 1. Adding Songs:
    - Create a new folder for each album.
