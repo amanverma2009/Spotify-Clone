@@ -4,20 +4,16 @@ let currFolder;
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`/${folder}/`);
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let as = div.getElementsByTagName("a");
-  songs = [];
-  for (let index = 0; index < as.length; index++) {
-    const element = as[index];
-    if (element.href.endsWith(".mp3")) {
-      songs.push(element.href.split(`/${folder}/`)[1]);
-    }
-  }
+
+  // fetch the info.json instead of folder
+  let a = await fetch(`/${folder}/info.json`);
+  let data = await a.json();
+  
+  songs = data.songs; // directly get list of songs
+  
   let songUL = document.querySelector("#songslist ul");
   songUL.innerHTML = "";
+  
   for (const song of songs) {
     songUL.innerHTML += `
       <li>
@@ -32,6 +28,7 @@ async function getSongs(folder) {
         </div>
       </li>`;
   }
+  
   Array.from(songUL.getElementsByTagName("li")).forEach((e) => {
     e.addEventListener("click", () => {
       playMusic(
@@ -41,6 +38,7 @@ async function getSongs(folder) {
     });
   });
 }
+
 
 const playMusic = (track, pause = false) => {
   currentSong.src = `/${currFolder}/` + track;
@@ -53,47 +51,37 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`/songs/`);
-  let response = await a.text();
-  let div = document.createElement("div");
-  div.innerHTML = response;
-  let anchors = div.getElementsByTagName("a");
+  let a = await fetch(`/songs/albums.json`);
+  let albums = await a.json();
   let cardContainer = document.querySelector(".cards");
 
-  // Clear the card container before appending new cards
   cardContainer.innerHTML = "";
 
-  let array = Array.from(anchors);
-  for (let index = 0; index < array.length; index++) {
-    const e = array[index];
+  for (let album of albums) {
+    let card = document.createElement("div");
+    card.classList.add("card-box");
+    card.setAttribute("data-folder", album.folder);
 
-    if (e.href.includes("/songs")) {
-      let folder = e.href.split("/").slice(-2)[0];
-      let a = await fetch(`/songs/${folder}/info.json`);
-      let response = await a.json();
-      let card = document.createElement("div");
-      card.classList.add("card-box");
-      card.setAttribute("data-folder", folder);
-      card.innerHTML = `
-        <img
-          src="/songs/${folder}/cover.jpg"
-          alt="Playlist Folder Image"
-          class="card-img"
-        />
-        <h3>${response.title}</h3>
-        <p>${response.description}</p>
-      `;
+    card.innerHTML = `
+      <img
+        src="/songs/${album.folder}/${album.cover}"
+        alt="Playlist Folder Image"
+        class="card-img"
+      />
+      <h3>${album.title}</h3>
+      <p>${album.description}</p>
+    `;
 
-      card.addEventListener("click", async () => {
-        await getSongs(`songs/${folder}`);
-        playMusic(songs[0]);
-        play.src = "Assets/pause-svgrepo-com.svg";
-      });
+    card.addEventListener("click", async () => {
+      await getSongs(`songs/${album.folder}`);
+      playMusic(songs[0]);
+      play.src = "Assets/pause-svgrepo-com.svg";
+    });
 
-      cardContainer.appendChild(card);
-    }
+    cardContainer.appendChild(card);
   }
 }
+
 
 async function main() {
   displayAlbums();

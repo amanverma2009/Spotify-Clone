@@ -1,4 +1,30 @@
 {
-    "title": "Copyrighted Songs",
-    "description": "A collection of copyrighted songs."
+  "songs": [
+    "A Man From Argentina.mp3",
+    "Beware.mp3",
+    "Blackjack.mp3",
+    "Come Up and Get Me.mp3",
+    "Cute Things.mp3",
+    "Cyanide Sisters.mp3",
+    "From Embrace To Embrace.mp3",
+    "Get Got.mp3",
+    "Guillotine.mp3",
+    "I Want It I Need It (Death Heated).mp3",
+    "I've Seen Footage.mp3",
+    "It's Dark, It's Cold, It's Winter.mp3",
+    "Lost Boys.mp3",
+    "No Love.mp3",
+    "O Mahi O Mahi.mp3",
+    "O Sajni Re.mp3",
+    "Periphescence.mp3",
+    "Soulmate.mp3",
+    "Spread Eagle Cross the Block.mp3",
+    "Stay Useless.mp3",
+    "Takyon (Death Yon).mp3",
+    "The Fever (Aye Aye).mp3",
+    "The Only Place.mp3",
+    "Tum Se Hi.mp3",
+    "You.mp3 ",
+    "Your First Light My Eventide.mp3"
+  ]
 }

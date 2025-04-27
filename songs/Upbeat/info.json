@@ -1,4 +1,19 @@
 {
-    "title": "Upbeat Songs",
-    "description": "A collection of Upbeat songs."
+  "songs": [
+    "abstract fashion pop.mp3",
+    "amalgam.mp3",
+    "big-jason-slap-house-version-background-music.mp3",
+    "drive-breakbeat.mp3 ",
+    "endless-horizons.mp3 ",
+    "groovy-ambient-funk.mp3 ",
+    "island-breeze.mp3 ",
+    "joyride-jamboree-206911.mp3 ",
+    "lotus-sky-dreams-216049.mp3 ",
+    "movement-200697.mp3 ",
+    "solitude-dark-ambient-electronic-197737.mp3 ",
+    "sunlit-whistle-200168.mp3",
+    "sunny-jamboree-204820.mp3",
+    "sunset-groove-211575.mp3",
+    "whistle-joyride-193123.mp3"
+  ]
 }

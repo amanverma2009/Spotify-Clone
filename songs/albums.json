@@ -1,0 +1,32 @@
+[
+  {
+    "folder": "cs",
+    "title": "Copyrighted Songs",
+    "description": "A collection of copyrighted songs.",
+    "cover": "cover.jpg"
+  },
+  {
+    "folder": "ncs",
+    "title": "Non Copyrighted Songs",
+    "description": "A collection of copyrighted songs.",
+    "cover": "cover.jpg"
+  },
+  {
+    "folder": "piano",
+    "title": "Piano Songs",
+    "description": "A collection of Piano songs.",
+    "cover": "cover.jpg"
+  },
+  {
+    "folder": "tony-bennett",
+    "title": "The Very Best Of Tony Bennett",
+    "description": "A collection of of the Best songs by Tony Bennett.",
+    "cover": "cover.jpg"
+  },
+  {
+    "folder": "Upbeat",
+    "title": "Upbeat Songs",
+    "description": "A collection of Upbeat songs.",
+    "cover": "cover.jpg"
+  }
+]

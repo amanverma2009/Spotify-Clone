@@ -1,4 +1,11 @@
 {
-    "title": "Non Copyrighted Songs",
-    "description": "A collection of non-copyrighted songs."
-}
+    "songs": [
+      "drive breakbeat.mp3 ",
+      "ethereal.mp3 ",
+      "flow.mp3 ",
+      "glossy.mp3 ",
+      "movement.mp3 ",
+      "once in paris.mp3 ",
+      "titanium.mp3"
+    ]
+  }
