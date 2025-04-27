@@ -10,7 +10,7 @@ This Spotify clone project is unique because it features dynamic albums. When yo
    - Create a new folder for each album.
    - Inside the folder, include a `cover.jpg` for the album art.
    - Add an `info.json` file containing the song details.
-   - Add the song files to the folder.
+   - Add the song files to the folder and update the `album.json`.
 
 ## Features:
 ### - Dynamic Albums: 
