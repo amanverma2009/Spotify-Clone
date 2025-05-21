@@ -4,12 +4,10 @@ let currFolder;
 
 async function getSongs(folder) {
   currFolder = folder;
-
-  // fetch the info.json instead of folder
   let a = await fetch(`/${folder}/info.json`);
   let data = await a.json();
   
-  songs = data.songs; // directly get list of songs
+  songs = data.songs;
   
   let songUL = document.querySelector("#songslist ul");
   songUL.innerHTML = "";
@@ -18,7 +16,7 @@ async function getSongs(folder) {
     songUL.innerHTML += `
       <li>
         <img
-          src="Assets/musical-sixteenth-note-svgrepo-com.svg"
+          src="./Assets/musical-sixteenth-note-svgrepo-com.svg"
           alt="Music Note"
           width="24"
           height="24"
@@ -34,7 +32,7 @@ async function getSongs(folder) {
       playMusic(
         e.querySelector(".songinfo").firstElementChild.innerHTML.trim()
       );
-      play.src = "Assets/pause-svgrepo-com.svg";
+      play.src = "./Assets/pause-svgrepo-com.svg";
     });
   });
 }
@@ -51,7 +49,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`/songs/albums.json`);
+  let a = await fetch(`/Spotify-Clone/songs/albums.json`);
   let albums = await a.json();
   let cardContainer = document.querySelector(".cards");
 
