@@ -4,7 +4,7 @@ let currFolder;
 
 async function getSongs(folder) {
   currFolder = folder;
-  let a = await fetch(`/${folder}/info.json`);
+  let a = await fetch(`./${folder}/info.json`);
   let data = await a.json();
   
   songs = data.songs;
