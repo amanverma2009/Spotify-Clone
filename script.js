@@ -39,7 +39,7 @@ async function getSongs(folder) {
 
 
 const playMusic = (track, pause = false) => {
-  currentSong.src = `/${currFolder}/` + track;
+  currentSong.src = `./${currFolder}/` + track;
   currentSong.play();
   document.querySelector("#bottom .songinfo").innerHTML = track
     .replaceAll("%20", " ")
