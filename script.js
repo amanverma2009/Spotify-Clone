@@ -49,7 +49,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-  let a = await fetch(`/Spotify-Clone/songs/albums.json`);
+  let a = await fetch(`./songs/albums.json`);
   let albums = await a.json();
   let cardContainer = document.querySelector(".cards");
 
@@ -62,7 +62,7 @@ async function displayAlbums() {
 
     card.innerHTML = `
       <img
-        src="/songs/${album.folder}/${album.cover}"
+        src="./songs/${album.folder}/${album.cover}"
         alt="Playlist Folder Image"
         class="card-img"
       />
@@ -73,7 +73,7 @@ async function displayAlbums() {
     card.addEventListener("click", async () => {
       await getSongs(`songs/${album.folder}`);
       playMusic(songs[0]);
-      play.src = "Assets/pause-svgrepo-com.svg";
+      play.src = "./Assets/pause-svgrepo-com.svg";
     });
 
     cardContainer.appendChild(card);
@@ -87,10 +87,10 @@ async function main() {
   play.addEventListener("click", () => {
     if (currentSong.paused) {
       currentSong.play();
-      play.src = "Assets/pause-svgrepo-com.svg";
+      play.src = "./Assets/pause-svgrepo-com.svg";
     } else {
       currentSong.pause();
-      play.src = "Assets/play-1001-svgrepo-com.svg";
+      play.src = "./Assets/play-1001-svgrepo-com.svg";
     }
   });
 
